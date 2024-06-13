@@ -1,0 +1,17 @@
+CREATE DATABASE ECOM_PLATFORM;
+USE ECOM_PLATFORM;
+
+-- PRODUCT SUPPLIER TABLE(ALL ABOUT PRODUCT SUPPLIERS)
+
+CREATE TABLE ProductSuppliers (
+    ProductSupplierID INT AUTO_INCREMENT PRIMARY KEY,
+    ProductID INT,
+    SupplierID INT,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+INSERT INTO ProductSuppliers (ProductID, SupplierID) VALUES
+(1, 1),
+(2, 1),
+(3, 2),
+(4, 3);
